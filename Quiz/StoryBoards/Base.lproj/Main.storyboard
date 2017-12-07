@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quiz List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="QuizListViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j2-Uz-Kgd">
+                                <rect key="frame" x="129.5" y="40" width="116" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Onu-h8-A0Q">
+                                <rect key="frame" x="0.0" y="88" width="375" height="509"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="T3Q-XB-fNp" customClass="QuizListCollectionViewFlowLayout" customModule="Quiz" customModuleProvider="target">
+                                    <size key="itemSize" width="390" height="484"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="QuizListCollectionViewCell" id="Tcu-Ey-Hs9" customClass="QuizListCollectionViewCell" customModule="Quiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="12.5" width="390" height="484"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="484"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(根据提示选择相应图片)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sE2-hI-cJs">
+                                                    <rect key="frame" x="10" y="54" width="370" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17" id="xoP-gL-KmC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uc0-fw-qdE">
+                                                    <rect key="frame" x="10" y="14" width="370" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="Y2G-dc-cQg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="prompt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dB9-Tg-I6e">
+                                                    <rect key="frame" x="10" y="81" width="370" height="274.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ogo-RD-QZi">
+                                                    <rect key="frame" x="0.0" y="365.5" width="390" height="98.5"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0r-cc-8hP" customClass="OptionButton" customModule="Quiz" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="10" width="180" height="34.5"/>
+                                                            <connections>
+                                                                <action selector="handleOptionButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DiW-Ba-vjc"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Th-fb-wc6" customClass="OptionButton" customModule="Quiz" customModuleProvider="target">
+                                                            <rect key="frame" x="200" y="10" width="180" height="34.5"/>
+                                                            <connections>
+                                                                <action selector="handleOptionButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L9r-3b-DCG"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSB-QT-2e9" customClass="OptionButton" customModule="Quiz" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="54.5" width="180" height="34"/>
+                                                            <connections>
+                                                                <action selector="handleOptionButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4L1-AB-iCX"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmR-UU-8Vs" customClass="OptionButton" customModule="Quiz" customModuleProvider="target">
+                                                            <rect key="frame" x="200" y="54.5" width="180" height="34"/>
+                                                            <connections>
+                                                                <action selector="handleOptionButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgw-Bd-f8d"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.1803921568627451" green="0.69411764705882351" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="r0r-cc-8hP" firstAttribute="top" secondItem="Ogo-RD-QZi" secondAttribute="top" constant="10" id="3BH-qH-ZEE"/>
+                                                        <constraint firstAttribute="bottom" secondItem="YmR-UU-8Vs" secondAttribute="bottom" constant="10" id="3YB-R5-Lly"/>
+                                                        <constraint firstItem="YmR-UU-8Vs" firstAttribute="top" secondItem="9Th-fb-wc6" secondAttribute="bottom" constant="10" id="6aj-K5-FYq"/>
+                                                        <constraint firstItem="PSB-QT-2e9" firstAttribute="leading" secondItem="Ogo-RD-QZi" secondAttribute="leading" constant="10" id="Amg-QC-J8b"/>
+                                                        <constraint firstItem="r0r-cc-8hP" firstAttribute="leading" secondItem="Ogo-RD-QZi" secondAttribute="leading" constant="10" id="BD2-nt-BpT"/>
+                                                        <constraint firstItem="YmR-UU-8Vs" firstAttribute="width" secondItem="r0r-cc-8hP" secondAttribute="width" id="GNw-Lo-qm5"/>
+                                                        <constraint firstItem="PSB-QT-2e9" firstAttribute="top" secondItem="r0r-cc-8hP" secondAttribute="bottom" constant="10" id="Q0n-6x-ZDW"/>
+                                                        <constraint firstItem="PSB-QT-2e9" firstAttribute="height" secondItem="r0r-cc-8hP" secondAttribute="height" id="WVo-q5-2Ww"/>
+                                                        <constraint firstItem="9Th-fb-wc6" firstAttribute="height" secondItem="r0r-cc-8hP" secondAttribute="height" id="aHS-Vv-AnP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="PSB-QT-2e9" secondAttribute="bottom" constant="10" id="aVX-hn-1yd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="YmR-UU-8Vs" secondAttribute="trailing" constant="10" id="e7L-hL-c9u"/>
+                                                        <constraint firstItem="9Th-fb-wc6" firstAttribute="top" secondItem="Ogo-RD-QZi" secondAttribute="top" constant="10" id="eeU-ug-Ee2"/>
+                                                        <constraint firstItem="9Th-fb-wc6" firstAttribute="width" secondItem="r0r-cc-8hP" secondAttribute="width" id="h25-mf-9rN"/>
+                                                        <constraint firstItem="9Th-fb-wc6" firstAttribute="leading" secondItem="r0r-cc-8hP" secondAttribute="trailing" constant="10" id="kRn-fB-dbR"/>
+                                                        <constraint firstItem="PSB-QT-2e9" firstAttribute="width" secondItem="r0r-cc-8hP" secondAttribute="width" id="tUV-GL-P92"/>
+                                                        <constraint firstItem="YmR-UU-8Vs" firstAttribute="height" secondItem="r0r-cc-8hP" secondAttribute="height" id="u2W-0Y-5Jj"/>
+                                                        <constraint firstItem="YmR-UU-8Vs" firstAttribute="leading" secondItem="PSB-QT-2e9" secondAttribute="trailing" constant="10" id="uph-xY-XX0"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9Th-fb-wc6" secondAttribute="trailing" constant="10" id="yZy-Mk-gXg"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.18198148906230927" green="0.69426733255386353" blue="0.53024792671203613" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Ogo-RD-QZi" firstAttribute="top" secondItem="dB9-Tg-I6e" secondAttribute="bottom" constant="10" id="7ec-it-70d"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ogo-RD-QZi" secondAttribute="bottom" constant="20" id="ILB-GM-LHU"/>
+                                            <constraint firstItem="dB9-Tg-I6e" firstAttribute="top" secondItem="sE2-hI-cJs" secondAttribute="bottom" constant="10" id="LnY-Vk-U8R"/>
+                                            <constraint firstAttribute="trailing" secondItem="dB9-Tg-I6e" secondAttribute="trailing" constant="10" id="MlM-Ui-9yU"/>
+                                            <constraint firstItem="uc0-fw-qdE" firstAttribute="leading" secondItem="Tcu-Ey-Hs9" secondAttribute="leading" constant="10" id="NBr-4R-XJM"/>
+                                            <constraint firstAttribute="trailing" secondItem="sE2-hI-cJs" secondAttribute="trailing" constant="10" id="QGf-ct-ffT"/>
+                                            <constraint firstItem="uc0-fw-qdE" firstAttribute="top" secondItem="Tcu-Ey-Hs9" secondAttribute="top" constant="14" id="UuO-Um-BMP"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ogo-RD-QZi" secondAttribute="trailing" id="Xvw-ci-4dZ"/>
+                                            <constraint firstItem="sE2-hI-cJs" firstAttribute="leading" secondItem="Tcu-Ey-Hs9" secondAttribute="leading" constant="10" id="Y6r-C4-GAL"/>
+                                            <constraint firstItem="Ogo-RD-QZi" firstAttribute="leading" secondItem="Tcu-Ey-Hs9" secondAttribute="leading" id="YRR-IH-B1E"/>
+                                            <constraint firstAttribute="trailing" secondItem="uc0-fw-qdE" secondAttribute="trailing" constant="10" id="es6-2C-afZ"/>
+                                            <constraint firstItem="dB9-Tg-I6e" firstAttribute="leading" secondItem="Tcu-Ey-Hs9" secondAttribute="leading" constant="10" id="oTn-04-UW0"/>
+                                            <constraint firstItem="sE2-hI-cJs" firstAttribute="top" secondItem="uc0-fw-qdE" secondAttribute="bottom" constant="4" id="pOa-6I-21l"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="progressLabel" destination="uc0-fw-qdE" id="3kO-bb-2OA"/>
+                                            <outlet property="promptLabel" destination="dB9-Tg-I6e" id="2sy-1X-sMc"/>
+                                            <outletCollection property="optionsButtonArray" destination="r0r-cc-8hP" collectionClass="NSMutableArray" id="mgX-Dm-In9"/>
+                                            <outletCollection property="optionsButtonArray" destination="9Th-fb-wc6" collectionClass="NSMutableArray" id="ig2-2l-nQg"/>
+                                            <outletCollection property="optionsButtonArray" destination="PSB-QT-2e9" collectionClass="NSMutableArray" id="FOr-rX-qxW"/>
+                                            <outletCollection property="optionsButtonArray" destination="YmR-UU-8Vs" collectionClass="NSMutableArray" id="oWI-Oy-0kU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="iBY-qc-Fdo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bwK-f5-bLU"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktz-h3-LHK">
+                                <rect key="frame" x="30" y="597" width="315" height="50"/>
+                                <color key="backgroundColor" red="0.1803921568627451" green="0.69411764705882351" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Alg-76-hGy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <state key="normal" title="提交">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleSubmitButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAH-PK-ZXf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Onu-h8-A0Q" firstAttribute="top" secondItem="5j2-Uz-Kgd" secondAttribute="bottom" id="09R-bc-asZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ktz-h3-LHK" secondAttribute="trailing" constant="30" id="E51-nG-qiF"/>
+                            <constraint firstItem="ktz-h3-LHK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="EAr-sz-9d9"/>
+                            <constraint firstItem="Onu-h8-A0Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lro-uM-6Ej"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Onu-h8-A0Q" secondAttribute="trailing" id="TIm-Ao-Kvu"/>
+                            <constraint firstItem="ktz-h3-LHK" firstAttribute="top" secondItem="Onu-h8-A0Q" secondAttribute="bottom" id="l6c-6J-y3E"/>
+                            <constraint firstItem="5j2-Uz-Kgd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wXW-Wc-etd"/>
+                            <constraint firstItem="5j2-Uz-Kgd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ym7-lU-sva"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ktz-h3-LHK" secondAttribute="bottom" constant="20" id="zc2-wo-Bpa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Onu-h8-A0Q" id="lMT-Jy-6aq"/>
+                        <outlet property="countdownLabel" destination="5j2-Uz-Kgd" id="uea-Uv-ihQ"/>
+                        <outlet property="submitButton" destination="ktz-h3-LHK" id="FQl-Dz-YgJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96.799999999999997" y="129.08545727136433"/>
+        </scene>
+    </scenes>
+</document>
