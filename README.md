@@ -29,4 +29,4 @@ Note: The first url in every answer array is the correct answer for that questio
 ```
 
 ### 效果
-[image](https://github.com/rainedAllNight/QUIZ-For-LiuLiShuo/blob/master/12月-07-2017%2010-54-55.gif)
+![运行效果](https://github.com/rainedAllNight/QUIZ-For-LiuLiShuo/blob/master/12月-07-2017%2010-54-55.gif)
